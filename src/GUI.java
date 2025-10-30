@@ -68,6 +68,15 @@ public class GUI implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String username = userInput.getText();
+        String password = passwordInput.getText();
+        System.out.println("Valid username and password.");
 
+        if(username.equals("admin") || password.equals("admin")){
+            successLabel.setText("Successful Login.");
+        }
+        else {
+            successLabel.setText("Incorrect username or password.");
+        }
     }
 }
