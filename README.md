@@ -1,1 +1,1 @@
-Database Management System Assignment Phase 1: Logic and Implementation.
+Database Management System Semester Project
