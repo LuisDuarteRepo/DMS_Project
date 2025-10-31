@@ -37,11 +37,17 @@ public class GUI implements ActionListener {
         userLabel = new JLabel("Username:");
         userLabel.setBounds(10, 20, 80, 25);
         panel.add(userLabel);
+        userInput = new JTextField(20);
+        userInput.setBounds(100,20,165,25);
+        panel.add(userInput);
 
         //second text field that asks for password
         passwordLabel = new JLabel("Password:");
         passwordLabel.setBounds(10, 50, 80, 25);
         panel.add(passwordLabel);
+        passwordInput = new JPasswordField(20);
+        passwordInput.setBounds(100,50,165,25);
+        panel.add(passwordInput);
 
         //Window that pops out when you run the program
         frame.add(panel, BorderLayout.CENTER);
@@ -55,7 +61,6 @@ public class GUI implements ActionListener {
         //Login Button
         loginButton.setBounds(10, 80, 80, 25);
         loginButton.addActionListener(this);
-
 
         //success label that pops up when the user successfully logs in
         successLabel = new JLabel();
