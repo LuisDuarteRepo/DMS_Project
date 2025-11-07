@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ public class DMS_App {
 
         Scanner userInput = new Scanner(System.in);
 
-        GUI gui = new GUI();
+        SwingUtilities.invokeLater(GUI::new);
 
         //creating object of ProductList
         ProductList product_List = new ProductList();
@@ -22,14 +23,14 @@ public class DMS_App {
 
             switch(choice){
                 case 1:
-                    product_List.AddProduct();
+//                    product_List.ConsoleAddProduct();
                     break;
                 case 2:
                     product_List.modifyProduct();
                     break;
                 case 3:
                     String productNum = userInput.nextLine();
-                    product_List.deleteProduct(productNum);
+                    product_List.deleteProduct();
                     break;
                 case 4:
                     product_List.addClearanceStatus();
@@ -41,6 +42,7 @@ public class DMS_App {
                     product_List.showAllProduct();
                     break;
             }
+            userInput.nextLine();
         }while(choice != 0);
     }
 
